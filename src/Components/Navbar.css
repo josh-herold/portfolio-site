@@ -1,0 +1,78 @@
+.navbar-container {
+    position: fixed;
+    height: auto;
+    width: 100%;
+    background-color: #161513;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 160px;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.logo-container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.link-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.link-container a {
+    position: relative;
+    /* wichtig für das ::after */
+    color: white;
+    text-decoration: none;
+    padding-bottom: 3px;
+    display: inline-block;
+    /* damit Breite an Inhalt angepasst wird */
+}
+
+.link-container a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.link-container a:hover::after {
+    transform: scaleX(1);
+}
+
+.scroll-link {
+    cursor: pointer;
+}
+
+.nav-connect {
+    padding: 15px 20px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 .36%, #B923E1 102.06%);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .5s;
+}
