@@ -29,6 +29,16 @@ const MyWork = () => {
                         >
                             {work.description}
                         </a>
+                        {work.link2 && work.github && (
+                            <a
+                                href={work.link2}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="work-github-btn"
+                            >
+                                {work.github}
+                            </a>
+                        )}
                     </div>
                 ))}
             </div>

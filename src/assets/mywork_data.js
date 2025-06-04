@@ -11,7 +11,10 @@ const mywork_data = [
         w_name: 'Web design',
         w_img: work3,
         link: 'https://www.janoschherold.de/photography',
-        description: 'Fotografie-Portfolio mit JavaScript'
+        description: 'online: Fotografen-Portfolio mit React',
+        github: 'github: repository link',
+        link2: 'https://github.com/josh-herold/portfolio-site'
+
     },
     {
         w_no: 2,

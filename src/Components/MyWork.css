@@ -39,6 +39,24 @@
     color: white;
 }
 
+.work-github-btn {
+    margin-top: 0.5rem;
+    padding: 8px 18px;
+    background: #24292f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.work-github-btn:hover {
+    background: #444d56;
+}
+
 .work-img {
     width: 400px;
     aspect-ratio: 16 / 10;
