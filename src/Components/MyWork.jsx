@@ -13,15 +13,23 @@ const MyWork = () => {
             </div>
             <div className="mywork-container">
                 {mywork_data.map((work, index) => (
-                    <a
-                        key={index}
-                        href={work.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src={work.w_img} alt={`Project ${index + 1}`} className="work-img" />
-                    </a>
-
+                    <div key={index} className="mywork-item">
+                        <a
+                            href={work.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={work.w_img} alt={`Project ${index + 1}`} className="work-img" />
+                        </a>
+                        <a
+                            href={work.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="work-description"
+                        >
+                            {work.description}
+                        </a>
+                    </div>
                 ))}
             </div>
 
