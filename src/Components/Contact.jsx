@@ -59,16 +59,16 @@ const onSubmit = async (event) => {
                 </div>
                 <form onSubmit={onSubmit} className="contact-right">
     <label htmlFor="">Name</label>
-    <input type="text" placeholder='Enter your name' name='name' required />
+    <input type="text" placeholder='Vor und Nachname' name='name' required />
 
     <label htmlFor="">Email</label>
-    <input type="email" placeholder='Enter your email' name='email' required />
+    <input type="email" placeholder='email adresse' name='email' required />
 
     <label htmlFor="">Nachricht</label>
-    <textarea name="message" rows="8" placeholder='Enter your message' required></textarea>
+    <textarea name="message" rows="8" placeholder='Ihre Nachricht...' required></textarea>
 
     <div className="contact-submit-wrapper">
-        <button type='submit' className="contact-submit">Submit now</button>
+        <button type='submit' className="contact-submit">senden</button>
         {success && <span className="form-success">{success}</span>}
     </div>
 </form>
