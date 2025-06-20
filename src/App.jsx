@@ -5,6 +5,7 @@ import About from './Components/About';
 import MyWork from './Components/MyWork';
 import './App.css'
 import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <About />
       <MyWork />
       <Contact />
+      <Footer />
     </>
   )
 }

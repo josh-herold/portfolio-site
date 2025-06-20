@@ -7,10 +7,7 @@ const MyWork = () => {
 
     return (
         <div className="mywork" id="mywork">
-            <div className="mywork-title">
-                <h1>My latest Projects</h1>
-
-            </div>
+            
             <div className="mywork-container">
                 {mywork_data.map((work, index) => (
                     <div key={index} className="mywork-item">
@@ -43,10 +40,7 @@ const MyWork = () => {
                 ))}
             </div>
 
-            <div className="mywork-showmore">
-                <p>Show more</p>
-
-            </div>
+            
 
 
 

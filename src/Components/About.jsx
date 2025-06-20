@@ -19,8 +19,24 @@ const About = () => {
 
                 <div className="about-right">
                     <div className="about-para">
-                        <p>iam an experianced web designer dsa...................dfdssdfsdfsdfdfsdfsdasdasdasdasd..sdafsdfasdfasdfdsfasdfdsfdsfsdfadsfdsfsda..</p>
-                        <p>my passion is dumbstyle...................dfdssdfsdfsdfdfsdfsdasdasdasdasd....</p>
+                    <p>
+          ich wohne und studiere in Berlin. 
+          Während meines Studiums habe ich mir umfangreiche Kenntnisse
+          in der objektorientierten Programmiersprache Java sowie im
+          Frontend-Bereich mit HTML, CSS, JavaScript und ReactJS aneignen
+          können.</p>
+          Ich habe eine große Leidenschaft für moderne Computertechnologien,
+          sowie für kreatives Design und grafische Kompositionen. Anwendungen
+          sollten nicht nur technisch anspruchsvoll sein, sondern auch
+          modern und ästhetisch ansprechend aussehen.
+          Neben meines Studiums habe ich großes Interesse an der Fotografie entwickelt
+          und beschäftige mich auch dort intensiv mit Phototechnik,Bildkompositionen, 
+          Farblehre und der technischen Nachproduktion der Aufnahmen, insbesondere mit
+          Adobe Lightroom und Photoshop. Die Fotografie erweitert dabei meine Arbeitsweise 
+          und hat einen großen Einfluss auf die Umsetzung von kreativen Ideen in digitale
+          Designs und Anwendungen. 
+          Ich bin bin derzeit auf der Suche nach einer Anstellung als Werkstudent 
+          im Bereich Webdesign, Webentwicklung, Frontend.
                     </div>
                     <div className="about-skills">
                         <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "80%" }} /></div>
@@ -39,23 +55,23 @@ const About = () => {
 
                 <div className="about-achievement">
                     <h1>
-                        {inView && <CountUp end={10} duration={0.5} delay={0.1} suffix="+" />}
+                        {inView && <CountUp end={4} duration={0.5} delay={0.1} suffix="." />}
                     </h1>
-                    <p>Years of Experience</p>
+                    <p>Semester</p>
                 </div>
                 <hr />
                 <div className="about-achievement">
                     <h1>
-                        {inView && <CountUp end={70} duration={0.5} delay={0.3} suffix="+" />}
+                        {inView && <CountUp end={18} duration={0.5} delay={0.3} suffix="+" />}
                     </h1>
-                    <p>Projects completed</p>
+                    <p>Projekte</p>
                 </div>
                 <hr />
                 <div className="about-achievement">
                     <h1>
                         {inView && <CountUp end={24} duration={0.5} delay={0.5} suffix="+" />}
                     </h1>
-                    <p>Customers</p>
+                    <p>Kurse</p>
                 </div>
             </div>
 

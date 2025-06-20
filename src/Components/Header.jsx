@@ -10,11 +10,11 @@ const Header = () => {
 
 
             <div className="header-image-text">
-                hello,<br />
-                i am a front end developer<br />
-                and photographer<br />
-                based in Berlin</div>
-            <img src="/berlin3.png" div className="header-image-container" alt="Stickman"></img>
+                hallo, <span>ich bin Janosch</span><br />
+                Student der Medieninformatik<br />
+
+                an der Berliner Hochschule<br /> für Technik</div>
+            <img src="/berlin.png" div className="header-image-container" alt="Stickman"></img>
 
         </div>
     );

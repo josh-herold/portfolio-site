@@ -13,7 +13,7 @@ const mywork_data = [
         link: 'https://www.janoschherold.de/photography',
         description: 'online: Fotografen-Portfolio mit React',
         github: 'github: repository link',
-        link2: 'https://github.com/josh-herold/portfolio-site'
+        link2: 'https://github.com/josh-herold/photography-website'
 
     },
     {
@@ -21,21 +21,26 @@ const mywork_data = [
         w_name: 'Web design',
         w_img: work1,
         link: 'https://www.janoschherold.de/portfolio/index.html',
-        description: 'Portfolio-Website mit modernen Webtechnologien'
+        description: 'online: Modul Webprogramming HTML,CSS, JavaScript',
+        github: 'github: repository link',
+        link2: 'https://github.com/josh-herold/photography-website'
     },
     {
         w_no: 3,
         w_name: 'Web design',
         w_img: work5,
         link: 'https://www.janoschherold.de/index.html',
-        description: 'Persönliche Homepage'
+        description: 'online: Persönliche Homepage mit React',
+        github: 'github: repository link',
+        link2: 'https://github.com/josh-herold/photography-website'
     },
     {
         w_no: 4,
         w_name: 'Web design',
         w_img: work4,
         link: 'https://www.janoschherold.de/mediendesign/index.html',
-        description: 'Mediendesign-Projekt'
+        description: 'online: Mediendesign-Projekt',
+        
     },
     {
         w_no: 5,
@@ -49,7 +54,7 @@ const mywork_data = [
         w_name: 'Web design',
         w_img: work6,
         link: 'https://www.janoschherold.de/foodie/index.html',
-        description: 'Foodie-Projekt'
+        description: 'online: delivery service website',
     },
 
 ]

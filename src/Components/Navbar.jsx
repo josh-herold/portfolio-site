@@ -6,6 +6,17 @@ import { Link as ScrollLink } from 'react-scroll';
 
 
 const Navbar = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <div className="navbar-container" id='navbar'>
 
@@ -19,39 +30,30 @@ const Navbar = () => {
                 JosH
             </ScrollLink>
 
-            <div className="link-container">
+             {/* Hamburger Button */}
+             <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                <span />
+                <span />
+                <span />
+            </div>
+
+            <div className={`link-container ${isOpen ? 'mobile-open' : ''}`}>
                 <ul>
-                    <ScrollLink
-                        to="header"
-                        smooth={true}
-                        duration={500}
-                        className="scroll-link"
-
-                    >
-                        Home
-                    </ScrollLink>
-                    <ScrollLink
-                        to="about"
-                        smooth={true}
-                        duration={500}
-                        className="scroll-link"
-
-                    >
-                        Über mich
-                    </ScrollLink>
-                    <ScrollLink
-                        to="mywork"
-                        smooth={true}
-                        duration={500}
-                        className="scroll-link"
-
-                    >
-                        Projekte
-                    </ScrollLink>
-
-
-
-
+                    {['header', 'about', 'mywork'].map((section, idx) => (
+                        <li key={idx}>
+                            <ScrollLink
+                                to={section}
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                className="scroll-link"
+                                activeClass="active"
+                                onClick={closeMenu}
+                            >
+                                {section === 'header' ? 'Home' : section === 'about' ? 'Über mich' : 'Projekte'}
+                            </ScrollLink>
+                        </li>
+                    ))}
                 </ul>
             </div>
 
@@ -62,7 +64,7 @@ const Navbar = () => {
                 className="nav-connect"
 
             >
-                kontaktiere mich
+                Kontaktiere mich
             </ScrollLink>
 
 

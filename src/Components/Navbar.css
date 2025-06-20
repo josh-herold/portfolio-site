@@ -1,6 +1,7 @@
 .navbar-container {
     position: fixed;
-    height: auto;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: #161513;
     display: flex;
@@ -12,13 +13,13 @@
 }
 
 .logo-container {
-    height: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-size: 2rem;
-    color: rgb(255, 255, 255);
+    color: #fff;
     cursor: pointer;
+    height: auto;
+    justify-content: center;
 }
 
 .link-container ul {
@@ -30,23 +31,27 @@
     list-style: none;
     font-size: 1.3rem;
     font-weight: 500;
-    color: white;
+    color: #fff;
     box-sizing: border-box;
     overflow: hidden;
-
+    margin: 0;
+    padding: 0;
 }
 
-.link-container a {
+
+.link-container a,
+.link-container .scroll-link {
     position: relative;
-    /* wichtig für das ::after */
-    color: white;
+    color: #fff;
     text-decoration: none;
     padding-bottom: 3px;
     display: inline-block;
-    /* damit Breite an Inhalt angepasst wird */
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-.link-container a::after {
+.link-container a::after,
+.link-container .scroll-link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -59,16 +64,110 @@
     transition: transform 0.4s ease;
 }
 
-.link-container a:hover::after {
+.link-container a:hover::after,
+.link-container .scroll-link:hover::after,
+.link-container a.active::after,
+.link-container .scroll-link.active::after {
     transform: scaleX(1);
 }
 
 .nav-connect {
-    padding: 15px 20px;
-    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
+    border-radius: 28px;
     background: linear-gradient(267deg, #DA7C25 .36%, #B923E1 102.06%);
-    color: white;
+    color: #fff;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: .5s;
+    transition: all 0.3s;
+    text-decoration: none;
+    margin-left: 30px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+    background: linear-gradient(267deg, #B923E1 .36%, #DA7C25 102.06%);
+}
+
+
+/* Hamburger Grundstruktur */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 200;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 900px) {
+    .navbar-container {
+        padding: 10px 40px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .link-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #161513;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 150;
+        display: flex;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .link-container.mobile-open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .link-container ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nav-connect {
+        display: none;
+    }
+
+    .mobile-button {
+        margin-top: 40px;
+        padding: 15px 25px;
+        font-size: 1.3rem;
+    }
 }

@@ -10,15 +10,41 @@ const Contact = () => {
 
     const { ref, inView } = useInView({ triggerOnce: true });
 
+    const [success, setSuccess] = useState(null);
+
+const onSubmit = async (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  formData.append("access_key", "4304a6f1-bf60-4fa6-a704-f3cad5bc4a23");
+
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  const res = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: json
+  }).then((res) => res.json());
+
+  if (res.success) {
+    setSuccess("Danke für deine Nachricht!");
+    event.target.reset(); // Formular leeren
+  } else {
+    setSuccess("Es ist ein Fehler aufgetreten.");
+  }
+};
+
+
 
     return (
         <div className="contact" id="contact">
-            <div className="contact-title">
-                <h1>Get in touch</h1>
-            </div>
+            
             <div className="contact-section">
                 <div className="contact-left">
-                    <h1>Lets talk</h1>
+                    <h1>Kontakt</h1>
                     <div className="contact-details">
                         <div className="contact-detail">
                             <img src={mail} alt="" /> <p>mail@janoschherold.de</p>
@@ -31,15 +57,22 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <form className="contact-right">
-                    <label htmlFor="">Your Name</label>
-                    <input type="text" placeholder='Enter your name' name='name' />
-                    <label htmlFor="">Your Email</label>
-                    <input type="email" placeholder='Enter your email' name='email' />
-                    <label htmlFor="">Wrte your massage</label>
-                    <textarea name="message" rows="8" placeholder='Enter your message'></textarea>
-                    <button type='submit' className="contact-submit">Submit now</button>
-                </form>
+                <form onSubmit={onSubmit} className="contact-right">
+    <label htmlFor="">Name</label>
+    <input type="text" placeholder='Enter your name' name='name' required />
+
+    <label htmlFor="">Email</label>
+    <input type="email" placeholder='Enter your email' name='email' required />
+
+    <label htmlFor="">Nachricht</label>
+    <textarea name="message" rows="8" placeholder='Enter your message' required></textarea>
+
+    <div className="contact-submit-wrapper">
+        <button type='submit' className="contact-submit">Submit now</button>
+        {success && <span className="form-success">{success}</span>}
+    </div>
+</form>
+
             </div>
 
 

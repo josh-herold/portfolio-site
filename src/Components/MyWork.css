@@ -20,6 +20,7 @@
     flex-wrap: wrap;
     gap: 3rem;
     justify-content: center;
+    padding-top: 130px;
 }
 
 
@@ -69,7 +70,7 @@
 
 .work-img:hover {
     transform: scale(1.03);
-    /* weniger stark, dafür eleganter */
+
 }
 
 
