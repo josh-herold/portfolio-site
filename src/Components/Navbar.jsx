@@ -53,7 +53,6 @@ const Navbar = () => {
 
 
                 </ul>
-
             </div>
 
             <ScrollLink

@@ -63,10 +63,6 @@
     transform: scaleX(1);
 }
 
-.scroll-link {
-    cursor: pointer;
-}
-
 .nav-connect {
     padding: 15px 20px;
     border-radius: 50px;
