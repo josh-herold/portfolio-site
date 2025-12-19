@@ -14,7 +14,7 @@ const Header = () => {
                 Student der Medieninformatik<br />
 
                 an der Berliner Hochschule<br /> für Technik</div>
-            <img src="/berlin.png" div className="header-image-container" alt="Stickman"></img>
+            <img src="/berlin.png" div className="header-image-container" alt="berlin"></img>
 
         </div>
     );

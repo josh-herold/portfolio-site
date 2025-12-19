@@ -4,16 +4,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
-
-html,
-body {
-  width: 100%;
+html {
   height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  min-height: 100vh;
+  /* mindestens 1 Viewport hoch */
+  overflow-x: hidden;
+  /* Horizontales Scrollen vermeiden */
   font-family: 'Outfit', sans-serif;
   line-height: 1.5;
   background-color: #161513;
-
-
+  scroll-behavior: smooth;
 }

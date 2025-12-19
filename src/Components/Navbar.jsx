@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Navbar.css'
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -17,6 +17,19 @@ const Navbar = () => {
         setIsOpen(false);
     };
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add('mobile-menu-open');
+        } else {
+            document.body.classList.remove('mobile-menu-open');
+        }
+
+        return () => {
+            document.body.classList.remove('mobile-menu-open'); // zur Sicherheit beim Unmount
+        };
+    }, [isOpen]);
+
+
     return (
         <div className="navbar-container" id='navbar'>
 
@@ -30,8 +43,8 @@ const Navbar = () => {
                 JosH
             </ScrollLink>
 
-             {/* Hamburger Button */}
-             <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+            {/* Hamburger Button */}
+            <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 <span />
                 <span />
                 <span />

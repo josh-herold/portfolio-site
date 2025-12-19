@@ -19,29 +19,29 @@ const About = () => {
 
                 <div className="about-right">
                     <div className="about-para">
-                    <p>
-          ich wohne und studiere in Berlin. 
-          Während meines Studiums habe ich mir umfangreiche Kenntnisse
-          in der objektorientierten Programmiersprache Java sowie im
-          Frontend-Bereich mit HTML, CSS, JavaScript und ReactJS aneignen
-          können.</p>
-          Ich habe eine große Leidenschaft für moderne Computertechnologien,
-          sowie für kreatives Design und grafische Kompositionen. Anwendungen
-          sollten nicht nur technisch anspruchsvoll sein, sondern auch
-          modern und ästhetisch ansprechend aussehen.
-          Neben meines Studiums habe ich großes Interesse an der Fotografie entwickelt
-          und beschäftige mich auch dort intensiv mit Phototechnik,Bildkompositionen, 
-          Farblehre und der technischen Nachproduktion der Aufnahmen, insbesondere mit
-          Adobe Lightroom und Photoshop. Die Fotografie erweitert dabei meine Arbeitsweise 
-          und hat einen großen Einfluss auf die Umsetzung von kreativen Ideen in digitale
-          Designs und Anwendungen. 
-          Ich bin bin derzeit auf der Suche nach einer Anstellung als Werkstudent 
-          im Bereich Webdesign, Webentwicklung, Frontend.
+                        <p>
+                            ich wohne und studiere in Berlin.
+                            Während meines Studiums habe ich mir umfangreiche Kenntnisse
+                            in der objektorientierten Programmiersprache Java sowie im
+                            Frontend-Bereich mit HTML, CSS, JavaScript und ReactJS aneignen
+                            können.</p>
+                        Ich habe eine große Leidenschaft für moderne Computertechnologien,
+                        sowie für kreatives Design und grafische Kompositionen. Anwendungen
+                        sollten nicht nur technisch anspruchsvoll sein, sondern auch
+                        modern und ästhetisch ansprechend aussehen.
+                        Neben meines Studiums habe ich großes Interesse an der Fotografie entwickelt
+                        und beschäftige mich auch dort intensiv mit Phototechnik,Bildkompositionen,
+                        Farblehre und der technischen Nachproduktion der Aufnahmen, insbesondere mit
+                        Adobe Lightroom und Photoshop. Die Fotografie erweitert dabei meine Arbeitsweise
+                        und hat einen großen Einfluss auf die Umsetzung von kreativen Ideen in digitale
+                        Designs und Anwendungen.
+                        Ich bin bin derzeit auf der Suche nach einer Anstellung in Teilzeit
+                        im Bereich Webdesign, Webentwicklung, Frontend.
                     </div>
                     <div className="about-skills">
                         <div className="about-skill"><p>HTML & CSS</p><hr style={{ width: "80%" }} /></div>
                         <div className="about-skill"><p>JavaScript</p><hr style={{ width: "60%" }} /></div>
-                        <div className="about-skill"><p>React</p><hr style={{ width: "70%" }} /></div>
+                        <div className="about-skill"><p>React</p><hr style={{ width: "60%" }} /></div>
                         <div className="about-skill"><p>Java</p><hr style={{ width: "40%" }} /></div>
 
 
